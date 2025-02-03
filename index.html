@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIBS - Enterprise Management System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #e0e5ec;
+            --shadow-color: #a3b1c6;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--primary);
+        }
+
+        .neo-btn {
+            background: var(--primary);
+            box-shadow: 5px 5px 10px var(--shadow-color),
+                       -5px -5px 10px white;
+            transition: all 0.2s ease;
+        }
+
+        .neo-btn:hover {
+            box-shadow: inset 5px 5px 10px var(--shadow-color),
+                       inset -5px -5px 10px white;
+        }
+
+        .sidebar {
+            background: var(--primary);
+            box-shadow: 5px 0 10px var(--shadow-color);
+        }
+
+        .neo-card {
+            background: var(--primary);
+            box-shadow: 5px 5px 10px var(--shadow-color),
+                       -5px -5px 10px white;
+            transition: transform 0.3s ease;
+        }
+
+        .neo-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .logo {
+            background: linear-gradient(45deg, #ff4b4b, #ff416c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex">
+    <!-- Sidebar -->
+    <aside class="sidebar w-64 h-screen fixed left-0 top-0 p-4">
+        <div class="mb-8">
+            <h1 class="text-4xl font-bold logo">SIBS</h1>
+        </div>
+        
+        <nav>
+            <ul class="space-y-2">
+                <li><button class="neo-btn w-full p-3 rounded-lg text-left text-gray-700 hover:text-gray-900"><i class="bi bi-shield-lock mr-2"></i>SYS ADMIN</button></li>
+                <li><button class="neo-btn w-full p-3 rounded-lg text-left text-gray-700 hover:text-gray-900"><i class="bi bi-clock-history mr-2"></i>TMS</button></li>
+                <li><button class="neo-btn w-full p-3 rounded-lg text-left text-gray-700 hover:text-gray-900"><i class="bi bi-cash mr-2"></i>PAYROLL</button></li>
+                <li><button class="neo-btn w-full p-3 rounded-lg text-left text-gray-700 hover:text-gray-900"><i class="bi bi-gear mr-2"></i>SGMS</button></li>
+                <li><button class="neo-btn w-full p-3 rounded-lg text-left text-gray-700 hover:text-gray-900"><i class="bi bi-calculator mr-2"></i>BUDGET</button></li>
+                <li><button class="neo-btn w-full p-3 rounded-lg text-left text-gray-700 hover:text-gray-900"><i class="bi bi-box mr-2"></i>MATERIAL</button></li>
+                <li><button class="neo-btn w-full p-3 rounded-lg text-left text-gray-700 hover:text-gray-900"><i class="bi bi-cart mr-2"></i>SALES</button></li>
+                <li><button class="neo-btn w-full p-3 rounded-lg text-left text-gray-700 hover:text-gray-900"><i class="bi bi-receipt mr-2"></i>GST</button></li>
+                <li><button class="neo-btn w-full p-3 rounded-lg text-left text-gray-700 hover:text-gray-900"><i class="bi bi-wallet2 mr-2"></i>FINANCE</button></li>
+                <li><button class="neo-btn w-full p-3 rounded-lg text-left text-gray-700 hover:text-gray-900"><i class="bi bi-building mr-2"></i>PRODUCTION</button></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="ml-64 p-8 w-full">
+        <header class="mb-8">
+            <div class="flex justify-between items-center">
+                <h2 class="text-2xl font-semibold text-gray-800">IoT Dashboard</h2>
+                <div class="text-sm text-gray-600">
+                    Version: 1.0.0.0
+                </div>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Fire Detector Card -->
+            <div class="neo-card rounded-xl p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Fire Detectors</h3>
+                    <i class="bi bi-fire text-red-500 text-2xl"></i>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span>Status</span>
+                        <span class="text-green-500">Active</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>Sensors Online</span>
+                        <span>12/12</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gas Detector Card -->
+            <div class="neo-card rounded-xl p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Gas Detectors</h3>
+                    <i class="bi bi-cloud-fill text-blue-500 text-2xl"></i>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span>Status</span>
+                        <span class="text-green-500">Active</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>Sensors Online</span>
+                        <span>8/8</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Intrusion Detector Card -->
+            <div class="neo-card rounded-xl p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Intrusion Detectors</h3>
+                    <i class="bi bi-shield-fill-check text-purple-500 text-2xl"></i>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span>Status</span>
+                        <span class="text-green-500">Active</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>Sensors Online</span>
+                        <span>16/16</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Add interactive functionality for the sidebar buttons
+        document.querySelectorAll('.neo-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active state from all buttons
+                document.querySelectorAll('.neo-btn').forEach(btn => {
+                    btn.style.boxShadow = '';
+                });
+                
+                // Add active state to clicked button
+                this.style.boxShadow = 'inset 5px 5px 10px var(--shadow-color), inset -5px -5px 10px white';
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
